@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Helper</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+<body>
+<div class="form-wrap">
+	<button class="update" onclick="onUpdate(event)">Update</button>
+	<form class="helper-form">
+		<div>
+			<input type="text" name="more" id="more" onchange="onChange(this)" required="required">
+			<label for="more">More by</label>
+		</div>
+		<div>
+			<input type="text" name="morecode" id="morecode" value="" onchange="onChange(this)" required="required">
+			<label for="morecode">More by(code)</label>
+		</div>
+		<div>
+			<input type="text" name="contributor" id="contributor" value="" onchange="onChange(this)" required="required">
+			<label for="contributor">Contributor</label>
+		</div>
+		<div>
+			<input type="text" name="contributorid" id="contributorid" value="" onchange="onChange(this)" required="required">
+			<label for="contributorid">Contributor ID</label>
+		</div>
+		<div>
+			<input type="text" name="download" id="download" value="" onchange="onChange(this)" required="required">
+			<label for="download">Download link</label>
+		</div>
+		<div>
+			<input type="text" name="downloadname" id="downloadname" value="" onchange="onChange(this)" required="required">
+			<label for="downloadname">Download name</label>
+		</div>
+		<div>
+			<input type="text" name="related" id="related" value="" onchange="onChange(this)" required="required">
+			<label for="related">Related video</label>
+		</div>
+		<div>
+			<input type="text" name="relatedname" id="relatedname" value="" onchange="onChange(this)" required="required">
+			<label for="relatedname">Related video name</label>
+		</div>
+		<div>
+			<input type="text" name="author" id="author" value="" onchange="onChange(this)" required="required">
+			<label for="author">Author</label>
+		</div>
+		<div>
+			<input type="text" name="authorlink" id="authorlink" value="" onchange="onChange(this)" required="required">
+			<label for="authorlink">Author link</label>
+		</div>
+		<div>
+			<input type="text" name="sponsor" id="sponsor" value="" onchange="onChange(this)" required="required">
+			<label for="sponsor">Sponsor logo</label>
+		</div>
+		<div>
+			<input type="text" name="sponsorsite" id="sponsorsite" value="" onchange="onChange(this)" required="required">
+			<label for="sponsorsite">Sponsor link</label>
+		</div>
+		<div>
+			<input type="text" name="editor" id="editor" value="" onchange="onChange(this)" required="required">
+			<label for="editor">editor</label>
+		</div>
+		<div>
+			<input type="text" name="designer" id="designer" value="" onchange="onChange(this)" required="required">
+			<label for="designer">Graphic designer</label>
+		</div>
+		<div>
+			<input type="text" name="photos" id="photos" value="" onchange="onChange(this)" required="required">
+			<label for="photos">Photo credits</label>
+		</div>
+		<div>
+			<textarea name="content" id="content" rows="20" onchange="onChange(this)"></textarea>
+			<label for="content">Content</label>
+		</div>
+	</form>
+	<button class="update" onclick="onUpdate(event)">Update</button>
+</div>
+<div class="output">
+	<button class="#copy" onclick="selectAndCopy(event)">Copy</button><br/>
+	<textarea id="html-output" rows="60">
+		
+	</textarea>
+</div>
+</body>
+</html>

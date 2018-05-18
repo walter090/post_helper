@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+
+body {
+    display: flex;
+    flex-flow: row;
+}
+
+label {
+    padding: 3px 3px;
+    position: absolute;
+    transition: ease-in-out 0.2s;
+    cursor: text;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+    background-color: transparent;
+    color: #444444;
+    border: solid 1.5px #444444;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: auto 20px;
+
+    align-self: flex-end;
+    outline: none;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444;
+    color: white;
+}
+
+.output {
+    width: 50%;
+    padding-top: 20px;
+}
+
+.form-wrap {
+    width: 50%;
+    border-right: solid 1.5px #999999;
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.helper-form div {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+
+    margin: 20px 15px 30px;
+
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    color: #777777;
+}
+
+input {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    outline: 0;
+    padding: 3px 3px;
+
+    border: none;
+    border-bottom: 1.5px solid #999999;
+
+    transition: ease-in-out 0.2s;
+}
+
+input:focus {
+    border-color: #777777;
+}
+
+input:valid + label,
+input:focus + label {
+    transform: translateY(-120%);
+    font-size: 12px;
+    opacity: 1;
+    color: black;
+}
+
+textarea {
+    border-color: #999999;
+    border-width: 1.5px;
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+textarea:focus {
+    border-color: #777777;
+}
+
+#html-output {
+    border: none;
+    width: 100%;
+}
