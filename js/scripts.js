@@ -35,6 +35,8 @@ function onUpdate(event) {
 &lt;a href="` + structure['sponsorsite'] + `"&gt;&lt;img src="` + structure['sponsor'] + `" alt="" width="300" height="164" class="alignnone size-medium wp-image-7105" /&gt;&lt;/a&gt;
         &lt;/li&gt;`) : '';
 
+	let embed = structure['embed'] ? (`[embedyt]` + structure['embed'] + `[/embedyt]`) : '';
+
 	let submit = `&lt;div class="parent"&gt;
 &lt;div class="left-side"&gt;
 &lt;div class="left-head"&gt;More by ` + structure['more'] + `&lt;/div&gt;
@@ -43,7 +45,7 @@ function onUpdate(event) {
 &lt;/div&gt;
 &lt;div class="middle"&gt;&lt;span class="contributors"&gt;Contributor: &lt;/span&gt;&lt;a href="/contributor/` + structure['contributorid'] + `/"&gt;`
 + structure['contributor'] + `&lt;/a&gt;` + `&lt;br/&gt;` + `&lt;br/&gt;`
-+ structure['content'] + `&lt;br/&gt;` + `[embedyt]` + structure['embed'] + `[/embedyt]` + `&lt;br/&gt;` + related + download + `
++ structure['content'] + `&lt;br/&gt;` + embed + `&lt;br/&gt;` + related + download + `
 &lt;/div&gt;
 &lt;div class="right-side"&gt;
 &lt;ul&gt;
