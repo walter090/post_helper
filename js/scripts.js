@@ -41,8 +41,8 @@ function onUpdate(event) {
 [display-posts author="` + structure['morecode'] + `" posts_per_page="5" category="Blog"]
 
 &lt;/div&gt;
-&lt;div class="middle"&gt;&lt;span class="contributors"&gt;Contributors: &lt;/span&gt;&lt;a href="/contributor/` + structure['contributorid'] + `/"&gt;`
-+ structure['contributor'] + `&lt;/a&gt;`
+&lt;div class="middle"&gt;&lt;span class="contributors"&gt;Contributor: &lt;/span&gt;&lt;a href="/contributor/` + structure['contributorid'] + `/"&gt;`
++ structure['contributor'] + `&lt;/a&gt;` + `&lt;br/&gt;` + `&lt;br/&gt;`
 + structure['content'] + `&lt;br/&gt;` + related + download + `
 &lt;/div&gt;
 &lt;div class="right-side"&gt;
