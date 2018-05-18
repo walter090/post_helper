@@ -58,4 +58,5 @@ function onUpdate(event) {
 &lt;/div&gt;`;
 
 	document.getElementById('html-output').innerHTML = submit;
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
