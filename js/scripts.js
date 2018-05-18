@@ -43,7 +43,7 @@ function onUpdate(event) {
 &lt;/div&gt;
 &lt;div class="middle"&gt;&lt;span class="contributors"&gt;Contributor: &lt;/span&gt;&lt;a href="/contributor/` + structure['contributorid'] + `/"&gt;`
 + structure['contributor'] + `&lt;/a&gt;` + `&lt;br/&gt;` + `&lt;br/&gt;`
-+ structure['content'] + `&lt;br/&gt;` + related + download + `
++ structure['content'] + `&lt;br/&gt;` + `[embedyt]` + structure['embed'] + `[/embedyt]` + `&lt;br/&gt;` + related + download + `
 &lt;/div&gt;
 &lt;div class="right-side"&gt;
 &lt;ul&gt;
