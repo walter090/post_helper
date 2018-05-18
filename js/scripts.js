@@ -21,7 +21,7 @@ function onUpdate(event) {
  	<li><a href="` + structure['related'] + `">` + structure['relatedname'] + `</a></li>
 </ul>`) : '';
 
-	let download = structure['download'] ? (`<span class="dl">Download content here:</span>
+	let download = structure['download'] ? (`<span class="dl">Resources:</span>
 <ul class="dl-list">
  	<li><a href="` + structure['download'] + `">` + structure['downloadname'] + `</a></li>
 </ul>`) : '';
@@ -29,13 +29,18 @@ function onUpdate(event) {
 	let author = structure['authorlink'] ? (`<li>Author: <a href="`+ structure['authorlink'] +`">` + structure['author'] + `</a></li>`) : 
 	('<li>Author: <span>' + structure['author'] + '</span></li>');
 
-	let photo = structure['photos'] ? (`<li>Photos: <a href="` + structure['photos'] + `">` + structure['photos'] + `</a></li>`) : '';
+	let editor = structure['editorlink'] ? (`<li>Editor: <a href="`+ structure['editorlink'] +`">` + structure['editor'] + `</a></li>`) : 
+	('<li>Editor: <span>' + structure['editor'] + '</span></li>');
+
+	let photo = structure['photos'] ? (`<li>Photos: <a href="` + structure['photoslink'] + `">` + structure['photos'] + `</a></li>`) : '';
 
 	let sponsor = structure['sponsor'] ? (`<li>Sponsor: 
 <a href="` + structure['sponsorsite'] + `"><img src="` + structure['sponsor'] + `" alt="" width="300" height="164" class="alignnone size-medium wp-image-7105" /></a>
         </li>`) : '';
 
 	let embed = structure['embed'] ? (`[embedyt]` + structure['embed'] + `[/embedyt]`) : '';
+
+	let designer = structure['designer'] ? (`<li>Graphics Design: ` + structure['designer'] + `</li>`) : ''
 
 	let submit = `<div class="parent">
 <div class="left-side">
@@ -50,9 +55,10 @@ function onUpdate(event) {
 <div class="right-side">
 <ul>
  	` + author + `
- 	<li>Editor: ` + structure['editor'] + `</li>
- 	<li>Graphics Design: ` + structure['designer'] + `</li>
- 	` + photo + sponsor + `
+ 	` + editor + `
+ 	` + designer + `
+ 	` + photo + `
+ 	` + sponsor + `
 </ul>
 </div>
 </div>`;
