@@ -57,6 +57,7 @@ button:hover {
     flex-flow: column-reverse;
 
     font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
     color: #777777;
 }
 
@@ -85,8 +86,9 @@ input:focus + label {
 }
 
 textarea {
-    border: 1.5px #999999;
-    outline: none;
+    border-color: #999999;
+    border-width: 1.5px;
+    outline: 0;
     font-family: 'Roboto Mono', monospace;
 }
 
