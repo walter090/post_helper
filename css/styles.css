@@ -82,8 +82,9 @@ input:valid + label,
 input:focus + label {
     transform: translateY(-120%);
     font-size: 12px;
+    font-weight: 700;
     opacity: 1;
-    color: black;
+    color: #0072BB;
 }
 
 textarea {
