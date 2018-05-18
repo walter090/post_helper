@@ -26,6 +26,7 @@ button {
     outline: none;
     transition: ease-in-out 0.2s;
     cursor: pointer;
+    z-index: 1;
 }
 
 button:hover {

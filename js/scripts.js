@@ -6,7 +6,7 @@ function onChange(event) {
 }
 
 function selectAndCopy(event) {
-	event.preventDefault();
+	// event.preventDefault();
 
 	let generated = document.getElementById('html-output');
 	generated.select();
