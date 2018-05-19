@@ -47,7 +47,7 @@ button.active {
     justify-content: flex-end;
 }
 
-.buttons button, .output button {
+.buttons button, .output button, button.update {
     font-family: 'Roboto Mono', monospace;
     background-color: transparent;
     color: #444444;
@@ -64,7 +64,7 @@ button.active {
     z-index: 1;
 }
 
-.buttons button:hover, .output button:hover {
+.buttons button:hover, .output button:hover, button.update:hover {
     background-color: #444444;
     color: white;
 }
