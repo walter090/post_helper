@@ -5,10 +5,24 @@ function onChange(event) {
     structure[id] = event.value;
 }
 
-function onClear(event) {
+function onSwitch(event) {
 	event.preventDefault();
 
-	let fields = document.getElementById('helper-form').getElementsByTagName('input');
+	let id = '#' + event.target.id;
+
+	if (!$(id).hasClass('active')) {
+		cleanSlate();
+		$(id).addClass('active');
+		$(id).siblings().removeClass('active');
+
+		let associated = '#' + $(id).attr('for');
+		$(associated).removeClass('inactive');
+		$(associated).siblings('.form-wrap').addClass('inactive');
+	}
+}
+
+function cleanSlate() {
+	let fields = document.getElementsByTagName('input');
 	fields = Array.from(fields);
 
 	fields.map(field => {
@@ -18,12 +32,36 @@ function onClear(event) {
 	structure = {};
 }
 
+function onClear(event) {
+	event.preventDefault();
+	cleanSlate();
+}
+
 function selectAndCopy(event) {
 	// event.preventDefault();
 
 	let generated = document.getElementById('html-output');
 	generated.select();
 	document.execCommand('copy');
+}
+
+function onUpdateContrib(event) {
+	event.preventDefault();
+
+	let submit = `
+<div id="member">
+	<div id="intro">
+		` + structure['contrib-intro'] + `
+	</div>
+</div>
+<div id="related">
+	<div id="contrib-list">
+		<div id="contribution">Contributions</div>
+			[display-posts tag="` + structure['contrib-contrib'] + `" limit="5"]
+		</div>
+</div>
+	`;
+	document.getElementById('html-output').value = submit;
 }
 
 function onUpdate(event) {
@@ -58,7 +96,7 @@ function onUpdate(event) {
 	let submit = `<div class="parent">
 <div class="left-side">
 <div class="left-head">More by ` + structure['more'] + `</div>
-[display-posts author="` + structure['morecode'] + `" posts_per_page="5" category="Blog"]
+[display-posts tag="` + structure['morecode'] + `" posts_per_page="5"]
 
 </div>
 <div class="middle"><span class="contributors">Contributor: </span><a href="/contributor/` + structure['contributorid'] + `/">`

@@ -3,11 +3,34 @@
 <head>
 	<title>Post Helper</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  			crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
-<div class="form-wrap">
+<div class="switchers">
+	<button id="post-btn" onclick="onSwitch(event)" class="active" for="post">Post</button>
+	<button id="contrib-btn" onclick="onSwitch(event)" for="contrib">Contributor</button>
+</div>
+<div class="body">
+<div class="form-wrap inactive" id="contrib">
+	<div class="buttons">
+		<button class="clear" onclick="onClear(event)">Clear form</button>
+		<button class="update" onclick="onUpdateContrib(event)">Update</button>
+	</div>
+	<form class="helper-form" id="contrib-form">
+		<div>
+			<input type="text" name="Contributor" id="contrib-contrib" onchange="onChange(this)" required="required">
+			<label for="contrib-contrib">Contributor</label>
+		</div>
+		<div>
+			<input type="text" name="intro" id="contrib-intro" onchange="onChange(this)" required="required">
+			<label for="contrib-intro">Contributor Intro</label>
+		</div>
+	</form>
+</div>
+<div class="form-wrap" id="post">
 	<div class="buttons">
 		<button class="clear" onclick="onClear(event)">Clear form</button>
 		<button class="update" onclick="onUpdate(event)">Update</button>
@@ -96,6 +119,7 @@
 	<textarea id="html-output" rows="60">
 		
 	</textarea>
+</div>
 </div>
 </body>
 </html>
