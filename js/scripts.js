@@ -57,7 +57,7 @@ function onUpdateContrib(event) {
 <div id="related">
 	<div id="contrib-list">
 		<div id="contribution">Contributions</div>
-			[display-posts tag="` + structure['contrib-contrib'] + `" limit="5"]
+			[display-posts tag="` + structure['contrib-contrib'] + `]
 		</div>
 </div>
 	`;
