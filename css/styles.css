@@ -17,6 +17,11 @@ label {
     cursor: text;
 }
 
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
 button {
     font-family: 'Roboto Mono', monospace;
     background-color: transparent;

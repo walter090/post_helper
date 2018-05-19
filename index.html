@@ -8,8 +8,11 @@
 </head>
 <body>
 <div class="form-wrap">
-	<button class="update" onclick="onUpdate(event)">Update</button>
-	<form class="helper-form">
+	<div class="buttons">
+		<button class="clear" onclick="onClear(event)">Clear form</button>
+		<button class="update" onclick="onUpdate(event)">Update</button>
+	</div>
+	<form class="helper-form" id="helper-form">
 		<div>
 			<input type="text" name="more" id="more" onchange="onChange(this)" required="required">
 			<label for="more">More by</label>

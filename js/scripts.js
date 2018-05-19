@@ -5,6 +5,19 @@ function onChange(event) {
     structure[id] = event.value;
 }
 
+function onClear(event) {
+	event.preventDefault();
+
+	let fields = document.getElementById('helper-form').getElementsByTagName('input');
+	fields = Array.from(fields);
+
+	fields.map(field => {
+		field.value = '';
+	});
+
+	structure = {};
+}
+
 function selectAndCopy(event) {
 	// event.preventDefault();
 
