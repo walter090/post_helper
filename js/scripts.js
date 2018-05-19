@@ -23,10 +23,16 @@ function onSwitch(event) {
 
 function cleanSlate() {
 	let fields = document.getElementsByTagName('input');
+	let areas = document.getElementsByTagName('textarea');
+
 	fields = Array.from(fields);
+	areas = Array.from(areas);
 
 	fields.map(field => {
 		field.value = '';
+	});
+	areas.map(area => {
+		area.value = '';
 	});
 
 	structure = {};
